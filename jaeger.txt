@@ -1,0 +1,10 @@
+jaeger-collector.exe --span-storage.type=elasticsearch --es.server-urls=http://127.0.0.1:9200 --log-level=debug --collector.http-port=14268 --collector.port=14267 --health-check-http-port=14269
+
+jaeger-agent.exe --collector.host-port=127.0.0.1:14267 --log-level=debug
+
+jaeger-query.exe --span-storage.type=elasticsearch --es.server-urls=http://127.0.0.1:9200  --log-level=debug --es.tags-as-fields.all=true
+
+
+jaeger-collector.exe --span-storage.type=elasticsearch --es.server-urls=http://127.0.0.1:9200 --log-level=debug --collector.http-port=14268 --collector.port=14267 --health-check-http-port=14269
+
+jaeger-agent.exe --collector.host-port=127.0.0.1:14267 --log-level=debug
